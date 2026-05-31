@@ -1,0 +1,34 @@
+# Decision Provenance Standard
+
+> An open, CC-BY 4.0 standard for audit-ready provenance of decisions made by humans and AI together. It produces structured decision records as *input* to compliance and audit work: it informs regulatory frameworks without satisfying them, conformance is self-declared with no certifying body, and it is not legal advice and not a regulatory substitute.
+
+## The Standard (normative core + companions)
+
+- [Core Standard (normative)](https://decisionprovenancestandard.org/dps-v1.0-rev8-core.html): Charter, the two Modes, Article 50 disclosure, the human-signature lifecycle, the mode-drift safeguard, conformance levels, and the firewall.
+- [Companion A — Regulatory Cross-References](https://decisionprovenancestandard.org/dps-v1.0-rev8-companion-A.html): how the Standard's records inform the EU AI Act, GDPR, NIST AI RMF, ISO 42001, SOC 2 and more — as input, never satisfying them.
+- [Companion B — Worked Charter Library](https://decisionprovenancestandard.org/dps-v1.0-rev8-companion-B.html): complete worked Charter examples across Mode 1 and Mode 2.
+- [Companion C — Implementation Guidance](https://decisionprovenancestandard.org/dps-v1.0-rev8-companion-C.html): operational pre-conditions and the install path for adopting the Standard.
+- [Companion D — Diagrams](https://decisionprovenancestandard.org/dps-v1.0-rev8-companion-D.html): the eight reference figures, each with a full text alternative.
+- [Appendix G — Governance and References](https://decisionprovenancestandard.org/dps-v1.0-rev8-appendix-G.html): version-stability rules, bibliography, and trademark/licensing.
+
+## Learn
+
+- [One-pager](https://decisionprovenancestandard.org/dps-onepager.html): what it is, the one idea, the four building blocks, and what it is not — on a page.
+- [Glossary](https://decisionprovenancestandard.org/dps-glossary.html): every load-bearing term defined once — Charter, Mode 1/2, Article 50 disclosure, the affirmation-and-seal lifecycle, conformance levels, and the firewall.
+- [FAQ](https://decisionprovenancestandard.org/dps-faq.html): is it legal advice, does it make me compliant, who certifies conformance, Mode 1 vs 2, Article 50, and licensing.
+- [Diagram gallery](https://decisionprovenancestandard.org/diagram-gallery.html): the eight reference figures on one page with full text alternatives.
+
+## Frameworks
+
+- [Comparison to frameworks](https://decisionprovenancestandard.org/dps-comparison-frameworks.html): how the Standard relates to the EU AI Act, GDPR, NIST, ISO 42001, NYC LL144, COSO, SOX and SOC 2 — as input that informs, never satisfies.
+- [The firewall](https://decisionprovenancestandard.org/firewall.html): the load-bearing limits, on one bookmarkable page for counsel and auditors.
+
+## Adopt
+
+- [Reference implementation](https://decisionprovenancestandard.org/reference-implementation.html): the working open-source artifact (MIT) you may build against; the Standard does not depend on it.
+- [Downloads](https://decisionprovenancestandard.org/downloads.html): all six documents as Word and PDF, plus the complete release bundle with SHA-256 checksums.
+- [Announcement](https://decisionprovenancestandard.org/dps-announcement.html): what it is, why now, what is available, and how to start.
+
+## About
+
+- [Scholarly summary](https://decisionprovenancestandard.org/dps-academic-summary.html): a voluntary record-format instrument for audit-ready decision provenance in hybrid human–AI decision-making. Not peer-reviewed.

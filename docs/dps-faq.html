@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Decision Provenance Standard — FAQ</title>
+<meta name="description" content="FAQ for the Decision Provenance Standard — is it legal advice, does it make me compliant, who certifies conformance, Mode 1 vs 2, Article 50, and licensing.">
+<link rel="canonical" href="https://decisionprovenancestandard.org/dps-faq.html">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Decision Provenance Standard">
+<meta property="og:title" content="Decision Provenance Standard — FAQ">
+<meta property="og:description" content="FAQ for the Decision Provenance Standard — is it legal advice, does it make me compliant, who certifies conformance, Mode 1 vs 2, Article 50, and licensing.">
+<meta property="og:url" content="https://decisionprovenancestandard.org/dps-faq.html">
+<meta property="og:image" content="https://decisionprovenancestandard.org/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Decision Provenance Standard — audit-ready provenance for decisions made by humans and AI together.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Decision Provenance Standard — FAQ">
+<meta name="twitter:description" content="FAQ for the Decision Provenance Standard — is it legal advice, does it make me compliant, who certifies conformance, Mode 1 vs 2, Article 50, and licensing.">
+<meta name="twitter:image" content="https://decisionprovenancestandard.org/assets/og-image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%233A5A78'/><rect x='9' y='8' width='14' height='3' rx='1.5' fill='white'/><rect x='9' y='14.5' width='14' height='3' rx='1.5' fill='white'/><rect x='9' y='21' width='9' height='3' rx='1.5' fill='%238FA8C0'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the Decision Provenance Standard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is an open record format: a defined, closed set of building blocks for writing down how a consequential decision was made — by whom, against what information, with what review, and at what moment it was affirmed. It works whether a human or an AI produced the underlying analysis. The goal is to turn \"how was this decided?\" into a record you can find in thirty seconds and trust, instead of something reconstructed from email and memory."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What problem does it solve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Organizations make consequential decisions every day, increasingly through a mix of people and AI. Later, no one can reliably reconstruct how a given decision was made. As AI authors more of the underlying work, the line of responsibility also blurs. The Standard closes both gaps: it makes decisions affirmable, auditable, and resumable, and it keeps responsibility human as AI does more of the work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it legal advice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The Standard is not legal advice and not a regulatory substitute. No attorney-client relationship is created by reading, citing, or adopting it. Any decision with material legal or regulatory consequences requires review by a licensed attorney in the relevant jurisdiction."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does adopting it make me compliant with regulations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The Standard informs frameworks without satisfying them. The records it produces are input that counsel and auditors convert into evidence, certifications, or attestations. A record may be cited as supporting input under frameworks such as NIST AI RMF, ISO/IEC 42001, and the EU AI Act, but it does not itself satisfy any control, requirement, or audit obligation. Compliance remains your organization's responsibility, discharged by your qualified personnel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who certifies conformance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No one. There is no certifying body and no certification track. Every conformance level is self-declared by the adopting organization. The Founding Steward governs the text but does not certify, grade, or audit anyone's conformance, and maintains no central registry of conformant organizations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are Mode 1 and Mode 2?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every decision is dispatched in one of two modes — answering the question auditors care about most, who actually authored this? Mode 1 — Human-Led, AI-Enforced: a human authors the decision; an AI checks it against the Charter's requirements but does not write the substance. AI checks the human. Mode 2 — AI-Led, Human-Reviewed: an AI authors the analysis and recommendation; a named human reviews and signs off before any action. The human checks the AI. There is one more value for the common case of an AI-written passage embedded inside a human-authored document — authorship is judged at the content level, not the container. The enumeration is closed: no third mode, no fuzzy \"AI-assisted\" label."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Charter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Charter governs a recurring kind of decision — launch-readiness calls, pricing exceptions, and the like — not a single decision. It states up front, in writing: the single human accountable, the dispatch mode, the schedule of records it will keep, and the triggers that force the decision to be reopened. It moves through five states in one direction — open, mode declared, required fields set, fields completed, closed — and never backward, which makes it consistent by construction rather than by after-the-fact review."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Article 50 disclosure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When an AI authors content that reaches a person, the EU AI Act (Article 50) requires transparency. The Standard does not satisfy that obligation — it structures the inputs a human needs to satisfy it, through a small disclosure block with five required fields: the responsible human (declaring authority), the AI system identity, the jurisdiction, the content type, and the timestamp. A useful property: when records are later anonymized, four of the five fields survive unchanged — only the named person may be replaced by a placeholder. You can hide who without erasing that an AI authored this, where, of what type, and when."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the human signature, and why does it matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A decision record moves draft → reviewed → affirmed. The load-bearing rule: a record becomes affirmed only when a named human performs an explicit act — a signature — and at that moment it is sealed with a tamper-evident hash. There is no passive promotion: a record never drifts into \"approved\" because time passed or a box auto-checked. This is what separates the Standard from a logging system, and it is the answer to \"won't AI just decide everything?\" — no, because a human signature gates every consequential record."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the conformance levels?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three cumulative, self-declared levels: Level 1 — Charter-Conformant: the Charter is structurally complete. Level 2 — Mode-Disambiguated: every record carries its mode, every AI-authored record carries its Article 50 disclosure block, and an audit finds no silent drift. Level 3 — Continuously Auditable: triggers fire on schedule, escalations produce records, disclosures stay current, and the schedule is queryable on demand. An organization grades itself with a reporter that reads the structural facts. Counsel and auditors read the grade as one input — never as a certification."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the license?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Standard is published under the Creative Commons Attribution 4.0 International License (CC-BY 4.0) — free to read, use, extend, and fork under attribution. The reference implementation is published separately under the MIT License. The name is a protected trademark: trademark rights are not licensed with the text, so anyone may use and extend the text while the name stays protected against misrepresentation. Removing the firewall language, or representing the Standard as certified, attested, or regulator-endorsed, is outside the license."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I start?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Adoption is voluntary and incremental — the path is Charter-first. Pick one real recurring decision, author a single Charter for it, name the one human accountable, declare whether it dispatches in Mode 1 or Mode 2, begin producing records, and self-declare Conformance Level 1. From there, work upward against the named criteria for Level 2 and Level 3. One Charter, run honestly, is a conformant start."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does it relate to NIST, ISO, and the EU AI Act?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It informs them without satisfying them. The Charter, the decision records, and the conformance grade are an input substrate your AI-governance, compliance, and audit functions can use when preparing their own work — for example, NIST AI RMF Manage 4.1's continuous-documentation expectation, documented information within an ISO/IEC 42001 management system, or the EU AI Act Article 50 disclosure inputs. In every case the obligation is discharged by your qualified personnel, not by the Standard. The Standard's conformance levels are not ISO/IEC 42001 maturity levels, and there is no defined cross-walk between them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is — and is not — included in the release?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A small, self-contained set, all under CC-BY 4.0: the core Standard, four Companions (regulatory cross-references, a worked-charter library, implementation guidance, and the diagrams), an Appendix for governance and references, and a working open-source reference implementation under the MIT License (a real artifact you may consult, but not the Standard itself — the Standard does not depend on it)."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://decisionprovenancestandard.org/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Learn",
+      "item": "https://decisionprovenancestandard.org/#learn"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Decision Provenance Standard — FAQ",
+      "item": "https://decisionprovenancestandard.org/dps-faq.html"
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --ink:#1A1A1A; --ink-soft:#3F4750; --paper:#F5F5F5; --card:#FFFFFF;
+  --accent:#3A5A78; --accent-soft:#8FA8C0; --rule:#E2E5E9; --rule-soft:#EDEFF2;
+  --code-bg:#EEF1F4; --callout-bg:#F0F3F6; --warn-bar:#3A5A78;
+}
+*{box-sizing:border-box;}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.skip-link{position:absolute;left:-999px;top:0;background:var(--accent);color:#fff;
+  padding:.5rem .9rem;border-radius:0 0 6px 0;z-index:200;
+  font-family:'Manrope',system-ui,sans-serif;font-weight:700;text-decoration:none;}
+.skip-link:focus{left:0;}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;scroll-behavior:auto!important;}}
+html{scrollbar-width:thin;scroll-behavior:smooth;}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:'Source Serif 4',Georgia,'Times New Roman',serif;
+  font-size:18px;line-height:1.72;-webkit-font-smoothing:antialiased;}
+.topnav{position:sticky;top:0;z-index:50;background:#F2F4F6;
+  border-bottom:1px solid var(--rule);}
+.topnav-inner{max-width:1100px;margin:0 auto;padding:.55rem 1.5rem;display:flex;
+  align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+.brandmark{font-family:'Manrope',system-ui,sans-serif;font-weight:700;font-size:.95rem;
+  color:var(--accent);letter-spacing:.01em;text-decoration:none;}
+.brandmark:hover{opacity:.85;}
+.brandmark .tm{font-size:.6em;vertical-align:super;font-weight:600;}
+.brandmark .ed{font-weight:500;color:var(--ink-soft);font-size:.82em;margin-left:.4rem;}
+.docnav{display:flex;gap:.25rem;flex-wrap:wrap;}
+.navlink{font-family:'Manrope',system-ui,sans-serif;font-size:.8rem;font-weight:600;
+  text-decoration:none;color:var(--ink-soft);padding:.28rem .6rem;border-radius:6px;
+  border:1px solid transparent;}
+.navlink:hover{background:var(--rule-soft);color:var(--accent);}
+.navlink.active{background:var(--accent);color:#fff;}
+.wrap{max-width:820px;margin:0 auto;padding:2.5rem 1.6rem 6rem;min-width:0;}
+.layout{display:grid;grid-template-columns:1fr;gap:0;}
+@media(min-width:1180px){
+  .layout{grid-template-columns:minmax(0,1fr) 270px;max-width:1240px;margin:0 auto;
+    padding:0 1.6rem;column-gap:2.6rem;align-items:start;}
+  .wrap{max-width:840px;margin:0;padding:2.5rem 0 6rem;}
+  .toc{position:sticky;top:72px;margin-top:2.5rem;}
+}
+h1,h2,h3,h4,h5,h6{font-family:'Manrope',system-ui,sans-serif;color:var(--ink);
+  line-height:1.25;font-weight:700;margin:2.2rem 0 .8rem;scroll-margin-top:72px;}
+h1{font-size:2.05rem;font-weight:800;margin-top:.4rem;letter-spacing:-.01em;}
+h2{font-size:1.5rem;padding-bottom:.3rem;border-bottom:2px solid var(--accent-soft);}
+h3{font-size:1.2rem;color:var(--accent);}
+h4{font-size:1.03rem;}
+h1+p{color:var(--ink-soft);}
+/* masthead: the strong-led metadata lines right after h1 */
+.masthead{background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--accent);
+  border-radius:8px;padding:1rem 1.25rem;margin:1.2rem 0 2rem;font-size:.92rem;line-height:1.6;}
+.masthead strong{font-family:'Manrope',system-ui,sans-serif;}
+p,li{overflow-wrap:break-word;}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2px;}
+code,kbd,samp{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.86em;
+  background:var(--code-bg);padding:.1em .35em;border-radius:4px;}
+pre{background:var(--code-bg);border:1px solid var(--rule);border-radius:8px;
+  padding:1rem 1.15rem;overflow:auto;font-size:.84rem;line-height:1.55;}
+pre code{background:none;padding:0;}
+blockquote{margin:1.3rem 0;padding:.85rem 1.2rem;background:var(--callout-bg);
+  border-left:4px solid var(--warn-bar);border-radius:0 8px 8px 0;color:var(--ink-soft);}
+blockquote p{margin:.4rem 0;}
+blockquote strong{color:var(--ink);}
+table{border-collapse:collapse;width:100%;margin:1.4rem 0;font-size:.88rem;
+  font-family:'Manrope',system-ui,sans-serif;}
+th,td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;}
+th{background:var(--accent);color:#fff;font-weight:600;}
+tr:nth-child(even) td{background:var(--rule-soft);}
+hr{border:none;border-top:1px solid var(--rule);margin:2.4rem 0;}
+.dps-figure{margin:1.8rem 0;text-align:center;}
+.dps-figure img{max-width:100%;height:auto;background:#fff;border:1px solid var(--rule);
+  border-radius:8px;padding:.6rem;}
+.dps-figure figcaption{font-family:'Manrope',system-ui,sans-serif;font-size:.8rem;
+  color:var(--ink-soft);margin-top:.55rem;line-height:1.5;text-align:left;}
+ul,ol{padding-left:1.4rem;}
+li{margin:.3rem 0;}
+.toc{font-family:'Manrope',system-ui,sans-serif;font-size:.82rem;
+  background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:1rem 1.1rem;
+  max-height:calc(100vh - 96px);overflow:auto;margin:0 0 2rem;}
+.toc-title{font-weight:700;color:var(--accent);margin-bottom:.5rem;font-size:.78rem;
+  text-transform:uppercase;letter-spacing:.06em;}
+.toc-summary{cursor:pointer;font-family:'Manrope',system-ui,sans-serif;font-weight:700;
+  color:var(--accent);text-transform:uppercase;letter-spacing:.06em;font-size:.78rem;
+  list-style:none;margin-bottom:.5rem;}
+.toc-summary::-webkit-details-marker{display:none;}
+.toc-summary::marker{content:"";}
+@media(min-width:1180px){.toc-summary{display:none;}}
+.toc ul{list-style:none;margin:0;padding:0;}
+.toc li{margin:.12rem 0;}
+.toc a{color:var(--ink-soft);text-decoration:none;display:block;padding:.12rem .3rem;border-radius:4px;}
+.toc a:hover{background:var(--rule-soft);color:var(--accent);}
+.toc a.active{color:var(--accent);font-weight:700;background:var(--rule-soft);
+  box-shadow:inset 2px 0 0 var(--accent);}
+.toc-l3{padding-left:.9rem;font-size:.95em;}
+.docfoot{font-family:'Manrope',system-ui,sans-serif;font-size:.78rem;color:var(--ink-soft);
+  border-top:1px solid var(--rule);margin-top:3rem;padding-top:1rem;}
+.related{font-family:'Manrope',system-ui,sans-serif;font-size:.9rem;background:var(--callout-bg);
+  border:1px solid var(--rule);border-left:4px solid var(--accent);border-radius:0 8px 8px 0;
+  padding:.8rem 1.1rem;margin:2.2rem 0 .5rem;}
+@media print{
+  .topnav,.toc{display:none!important;}
+  body{background:#fff;font-size:11pt;}
+  .layout{grid-template-columns:1fr;max-width:none;}
+  .wrap{max-width:none;padding:0;}
+  h2{border-color:#999;} th{background:#333;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .dps-figure img{border-color:#bbb;}
+  a{color:var(--ink);text-decoration:none;}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#top">Skip to main content</a>
+<header class="topnav"><div class="topnav-inner"><a class="brandmark" href="index.html">Decision Provenance Standard<span class="tm">&trade;</span> <span class="ed">v1.0 &middot; Reading Edition (rev.&nbsp;8)</span></a><nav class="docnav" aria-label="DPS launch collateral"><a class="navlink home" href="index.html">← Home</a><a class="navlink home" href="dps-v1.0-rev8-core.html">Standard ↗</a><a class="navlink" href="dps-glossary.html">Glossary</a><a class="navlink" href="dps-onepager.html">One-pager</a><a class="navlink" href="dps-announcement.html">Announcement</a><a class="navlink" href="dps-comparison-frameworks.html">Comparison</a><a class="navlink active" href="dps-faq.html" aria-current="page">FAQ</a></nav></div></header>
+<div class="layout">
+<main class="wrap" id="top">
+<h1 id="decision-provenance-standard-frequently-asked-questions">Decision Provenance Standard — Frequently Asked Questions</h1>
+<p><em>The Decision Provenance Standard™ · v1.0 · open standard, CC-BY 4.0</em></p>
+<hr />
+<h3 id="1-what-is-the-decision-provenance-standard">1. What is the Decision Provenance Standard?</h3>
+<p>It is an open <strong>record format</strong>: a defined, closed set of building blocks for writing down how a consequential decision was made — by whom, against what information, with what review, and at what moment it was affirmed. It works whether a human or an AI produced the underlying analysis. The goal is to turn "how was this decided?" into a record you can find in thirty seconds and trust, instead of something reconstructed from email and memory.</p>
+<h3 id="2-what-problem-does-it-solve">2. What problem does it solve?</h3>
+<p>Organizations make consequential decisions every day, increasingly through a mix of people and AI. Later, no one can reliably reconstruct how a given decision was made. As AI authors more of the underlying work, the line of responsibility also blurs. The Standard closes both gaps: it makes decisions affirmable, auditable, and resumable, and it keeps responsibility human as AI does more of the work.</p>
+<h3 id="3-is-it-legal-advice">3. Is it legal advice?</h3>
+<p>No. The Standard is <strong>not legal advice</strong> and <strong>not a regulatory substitute</strong>. No attorney-client relationship is created by reading, citing, or adopting it. Any decision with material legal or regulatory consequences requires review by a licensed attorney in the relevant jurisdiction.</p>
+<h3 id="4-does-adopting-it-make-me-compliant-with-regulations">4. Does adopting it make me compliant with regulations?</h3>
+<p>No. The Standard <strong>informs frameworks without satisfying them.</strong> The records it produces are <em>input</em> that counsel and auditors convert into evidence, certifications, or attestations. A record may be cited as supporting input under frameworks such as NIST AI RMF, ISO/IEC 42001, and the EU AI Act, but it does not itself satisfy any control, requirement, or audit obligation. Compliance remains your organization's responsibility, discharged by your qualified personnel.</p>
+<h3 id="5-who-certifies-conformance">5. Who certifies conformance?</h3>
+<p><strong>No one.</strong> There is no certifying body and no certification track. Every conformance level is <strong>self-declared</strong> by the adopting organization. The Founding Steward governs the text but does not certify, grade, or audit anyone's conformance, and maintains no central registry of conformant organizations.</p>
+<h3 id="6-what-are-mode-1-and-mode-2">6. What are Mode 1 and Mode 2?</h3>
+<p>Every decision is dispatched in one of two modes — answering the question auditors care about most, <em>who actually authored this?</em></p>
+<ul>
+<li><strong>Mode 1 — Human-Led, AI-Enforced:</strong> a human authors the decision; an AI checks it against the Charter's requirements but does not write the substance. <em>AI checks the human.</em></li>
+<li><strong>Mode 2 — AI-Led, Human-Reviewed:</strong> an AI authors the analysis and recommendation; a named human reviews and signs off before any action. <em>The human checks the AI.</em></li>
+</ul>
+<p>There is one more value for the common case of an AI-written passage embedded inside a human-authored document — authorship is judged at the content level, not the container. The enumeration is closed: no third mode, no fuzzy "AI-assisted" label.</p>
+<h3 id="7-what-is-the-charter">7. What is the Charter?</h3>
+<p>A Charter governs a <em>recurring kind</em> of decision — launch-readiness calls, pricing exceptions, and the like — not a single decision. It states up front, in writing: the single human accountable, the dispatch mode, the schedule of records it will keep, and the triggers that force the decision to be reopened. It moves through five states in one direction — open, mode declared, required fields set, fields completed, closed — and never backward, which makes it consistent by construction rather than by after-the-fact review.</p>
+<h3 id="8-what-is-article-50-disclosure">8. What is Article 50 disclosure?</h3>
+<p>When an AI authors content that reaches a person, the EU AI Act (Article 50) requires transparency. The Standard does not satisfy that obligation — it <strong>structures the inputs</strong> a human needs to satisfy it, through a small disclosure block with five required fields: the responsible human (declaring authority), the AI system identity, the jurisdiction, the content type, and the timestamp. A useful property: when records are later anonymized, four of the five fields survive unchanged — only the named person may be replaced by a placeholder. You can hide <em>who</em> without erasing <em>that</em> an AI authored this, where, of what type, and when.</p>
+<h3 id="9-what-is-the-human-signature-and-why-does-it-matter">9. What is the human signature, and why does it matter?</h3>
+<p>A decision record moves <em>draft → reviewed → affirmed</em>. The load-bearing rule: a record becomes <strong>affirmed</strong> only when a named human performs an explicit act — a signature — and at that moment it is sealed with a tamper-evident hash. There is no passive promotion: a record never drifts into "approved" because time passed or a box auto-checked. This is what separates the Standard from a logging system, and it is the answer to <em>"won't AI just decide everything?"</em> — no, because a human signature gates every consequential record.</p>
+<h3 id="10-what-are-the-conformance-levels">10. What are the conformance levels?</h3>
+<p>Three cumulative, self-declared levels:</p>
+<ul>
+<li><strong>Level 1 — Charter-Conformant:</strong> the Charter is structurally complete.</li>
+<li><strong>Level 2 — Mode-Disambiguated:</strong> every record carries its mode, every AI-authored record carries its Article 50 disclosure block, and an audit finds no silent drift.</li>
+<li><strong>Level 3 — Continuously Auditable:</strong> triggers fire on schedule, escalations produce records, disclosures stay current, and the schedule is queryable on demand.</li>
+</ul>
+<p>An organization grades itself with a reporter that reads the structural facts. Counsel and auditors read the grade as <em>one input</em> — never as a certification.</p>
+<h3 id="11-what-is-the-license">11. What is the license?</h3>
+<p>The Standard is published under the <strong>Creative Commons Attribution 4.0 International License (CC-BY 4.0)</strong> — free to read, use, extend, and fork under attribution. The reference implementation is published separately under the MIT License. The <strong>name is a protected trademark</strong>: trademark rights are not licensed with the text, so anyone may use and extend the text while the name stays protected against misrepresentation. Removing the firewall language, or representing the Standard as certified, attested, or regulator-endorsed, is outside the license.</p>
+<h3 id="12-how-do-i-start">12. How do I start?</h3>
+<p>Adoption is voluntary and incremental — the path is <strong>Charter-first</strong>. Pick one real recurring decision, author a single Charter for it, name the one human accountable, declare whether it dispatches in Mode 1 or Mode 2, begin producing records, and self-declare Conformance Level 1. From there, work upward against the named criteria for Level 2 and Level 3. One Charter, run honestly, is a conformant start.</p>
+<h3 id="13-how-does-it-relate-to-nist-iso-and-the-eu-ai-act">13. How does it relate to NIST, ISO, and the EU AI Act?</h3>
+<p>It <strong>informs them without satisfying them.</strong> The Charter, the decision records, and the conformance grade are an input substrate your AI-governance, compliance, and audit functions can use when preparing their own work — for example, NIST AI RMF Manage 4.1's continuous-documentation expectation, documented information within an ISO/IEC 42001 management system, or the EU AI Act Article 50 disclosure inputs. In every case the obligation is discharged by your qualified personnel, not by the Standard. The Standard's conformance levels are not ISO/IEC 42001 maturity levels, and there is no defined cross-walk between them.</p>
+<h3 id="14-what-is-and-is-not-included-in-the-release">14. What is — and is not — included in the release?</h3>
+<p>A small, self-contained set, all under CC-BY 4.0: the <strong>core Standard</strong>, four <strong>Companions</strong> (regulatory cross-references, a worked-charter library, implementation guidance, and the diagrams), an <strong>Appendix</strong> for governance and references, and a working open-source <strong>reference implementation</strong> under the MIT License (a real artifact you may consult, but not the Standard itself — the Standard does not depend on it).</p>
+<hr />
+<p><em>Jurisdiction assumed: U.S. federal and Delaware (primary); United Kingdom, the European Union, and Israel (named secondaries). For any other jurisdiction, treat every statement here as a hypothesis to verify with local counsel. Not legal advice.</em></p>
+<div class="docfoot">Decision Provenance Standard&trade; v1.0 &mdash; Reading Edition (rev.&nbsp;8). Open standard under CC-BY&nbsp;4.0. Not a certified product. Not legal advice. Not a regulatory substitute. Founding Steward: Yohay Etsion; institutional Steward: Etsion Brands Ltd.</div>
+</main>
+<details class="toc" open aria-label="Table of contents"><summary class="toc-summary">Contents</summary><div class="toc-body"><ul><li class="toc-l3"><a href="#1-what-is-the-decision-provenance-standard">1. What is the Decision Provenance Standard?</a></li><li class="toc-l3"><a href="#2-what-problem-does-it-solve">2. What problem does it solve?</a></li><li class="toc-l3"><a href="#3-is-it-legal-advice">3. Is it legal advice?</a></li><li class="toc-l3"><a href="#4-does-adopting-it-make-me-compliant-with-regulations">4. Does adopting it make me compliant with regulations?</a></li><li class="toc-l3"><a href="#5-who-certifies-conformance">5. Who certifies conformance?</a></li><li class="toc-l3"><a href="#6-what-are-mode-1-and-mode-2">6. What are Mode 1 and Mode 2?</a></li><li class="toc-l3"><a href="#7-what-is-the-charter">7. What is the Charter?</a></li><li class="toc-l3"><a href="#8-what-is-article-50-disclosure">8. What is Article 50 disclosure?</a></li><li class="toc-l3"><a href="#9-what-is-the-human-signature-and-why-does-it-matter">9. What is the human signature, and why does it matter?</a></li><li class="toc-l3"><a href="#10-what-are-the-conformance-levels">10. What are the conformance levels?</a></li><li class="toc-l3"><a href="#11-what-is-the-license">11. What is the license?</a></li><li class="toc-l3"><a href="#12-how-do-i-start">12. How do I start?</a></li><li class="toc-l3"><a href="#13-how-does-it-relate-to-nist-iso-and-the-eu-ai-act">13. How does it relate to NIST, ISO, and the EU AI Act?</a></li><li class="toc-l3"><a href="#14-what-is-and-is-not-included-in-the-release">14. What is — and is not — included in the release?</a></li></ul></div></details>
+</div>
+<script>
+/* TOC scroll-spy: highlight the section currently in view and keep it visible in the rail. */
+(function(){
+  var links={};
+  document.querySelectorAll('.toc a').forEach(function(a){
+    links[a.getAttribute('href').slice(1)]=a;
+  });
+  var heads=[].slice.call(document.querySelectorAll('main h2[id], main h3[id]'))
+    .filter(function(h){return links[h.id];});
+  if(!heads.length) return;
+  var cur=null;
+  function setActive(id){
+    if(cur===id) return;
+    if(cur&&links[cur]) links[cur].classList.remove('active');
+    cur=id;
+    var a=links[id]; if(!a) return;
+    a.classList.add('active');
+    var toc=a.closest('.toc');
+    if(toc){var ar=a.getBoundingClientRect(),tr=toc.getBoundingClientRect();
+      if(ar.top<tr.top||ar.bottom>tr.bottom) a.scrollIntoView({block:'nearest'});}
+  }
+  var ticking=false;
+  function onScroll(){
+    if(ticking) return; ticking=true;
+    requestAnimationFrame(function(){
+      var top=heads[0], y=110;
+      for(var i=0;i<heads.length;i++){
+        if(heads[i].getBoundingClientRect().top<=y) top=heads[i]; else break;
+      }
+      setActive(top.id); ticking=false;
+    });
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll,{passive:true});
+  onScroll();
+})();
+/* Mobile Contents drawer: open on desktop, collapsed on phones; sync on resize. */
+(function(){
+  function syncTOC(){var d=document.querySelector('details.toc');if(d)d.open=window.innerWidth>=1180;}
+  syncTOC();
+  window.addEventListener('resize',syncTOC);
+})();
+</script>
+</body>
+</html>

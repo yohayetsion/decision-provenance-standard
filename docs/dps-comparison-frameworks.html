@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Decision Provenance Standard — Comparison to Frameworks</title>
+<meta name="description" content="How the Decision Provenance Standard relates to the EU AI Act, GDPR, NIST, ISO 42001, NYC LL144, COSO, SOX and SOC 2 — as input that informs, never satisfies.">
+<link rel="canonical" href="https://decisionprovenancestandard.org/dps-comparison-frameworks.html">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Decision Provenance Standard">
+<meta property="og:title" content="Decision Provenance Standard — Comparison to Frameworks">
+<meta property="og:description" content="How the Decision Provenance Standard relates to the EU AI Act, GDPR, NIST, ISO 42001, NYC LL144, COSO, SOX and SOC 2 — as input that informs, never satisfies.">
+<meta property="og:url" content="https://decisionprovenancestandard.org/dps-comparison-frameworks.html">
+<meta property="og:image" content="https://decisionprovenancestandard.org/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Decision Provenance Standard — audit-ready provenance for decisions made by humans and AI together.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Decision Provenance Standard — Comparison to Frameworks">
+<meta name="twitter:description" content="How the Decision Provenance Standard relates to the EU AI Act, GDPR, NIST, ISO 42001, NYC LL144, COSO, SOX and SOC 2 — as input that informs, never satisfies.">
+<meta name="twitter:image" content="https://decisionprovenancestandard.org/assets/og-image.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%233A5A78'/><rect x='9' y='8' width='14' height='3' rx='1.5' fill='white'/><rect x='9' y='14.5' width='14' height='3' rx='1.5' fill='white'/><rect x='9' y='21' width='9' height='3' rx='1.5' fill='%238FA8C0'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://decisionprovenancestandard.org/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Frameworks",
+      "item": "https://decisionprovenancestandard.org/#frameworks"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Decision Provenance Standard — Comparison to Frameworks",
+      "item": "https://decisionprovenancestandard.org/dps-comparison-frameworks.html"
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --ink:#1A1A1A; --ink-soft:#3F4750; --paper:#F5F5F5; --card:#FFFFFF;
+  --accent:#3A5A78; --accent-soft:#8FA8C0; --rule:#E2E5E9; --rule-soft:#EDEFF2;
+  --code-bg:#EEF1F4; --callout-bg:#F0F3F6; --warn-bar:#3A5A78;
+}
+*{box-sizing:border-box;}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.skip-link{position:absolute;left:-999px;top:0;background:var(--accent);color:#fff;
+  padding:.5rem .9rem;border-radius:0 0 6px 0;z-index:200;
+  font-family:'Manrope',system-ui,sans-serif;font-weight:700;text-decoration:none;}
+.skip-link:focus{left:0;}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;scroll-behavior:auto!important;}}
+html{scrollbar-width:thin;scroll-behavior:smooth;}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:'Source Serif 4',Georgia,'Times New Roman',serif;
+  font-size:18px;line-height:1.72;-webkit-font-smoothing:antialiased;}
+.topnav{position:sticky;top:0;z-index:50;background:#F2F4F6;
+  border-bottom:1px solid var(--rule);}
+.topnav-inner{max-width:1100px;margin:0 auto;padding:.55rem 1.5rem;display:flex;
+  align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+.brandmark{font-family:'Manrope',system-ui,sans-serif;font-weight:700;font-size:.95rem;
+  color:var(--accent);letter-spacing:.01em;text-decoration:none;}
+.brandmark:hover{opacity:.85;}
+.brandmark .tm{font-size:.6em;vertical-align:super;font-weight:600;}
+.brandmark .ed{font-weight:500;color:var(--ink-soft);font-size:.82em;margin-left:.4rem;}
+.docnav{display:flex;gap:.25rem;flex-wrap:wrap;}
+.navlink{font-family:'Manrope',system-ui,sans-serif;font-size:.8rem;font-weight:600;
+  text-decoration:none;color:var(--ink-soft);padding:.28rem .6rem;border-radius:6px;
+  border:1px solid transparent;}
+.navlink:hover{background:var(--rule-soft);color:var(--accent);}
+.navlink.active{background:var(--accent);color:#fff;}
+.wrap{max-width:820px;margin:0 auto;padding:2.5rem 1.6rem 6rem;min-width:0;}
+.layout{display:grid;grid-template-columns:1fr;gap:0;}
+@media(min-width:1180px){
+  .layout{grid-template-columns:minmax(0,1fr) 270px;max-width:1240px;margin:0 auto;
+    padding:0 1.6rem;column-gap:2.6rem;align-items:start;}
+  .wrap{max-width:840px;margin:0;padding:2.5rem 0 6rem;}
+  .toc{position:sticky;top:72px;margin-top:2.5rem;}
+}
+h1,h2,h3,h4,h5,h6{font-family:'Manrope',system-ui,sans-serif;color:var(--ink);
+  line-height:1.25;font-weight:700;margin:2.2rem 0 .8rem;scroll-margin-top:72px;}
+h1{font-size:2.05rem;font-weight:800;margin-top:.4rem;letter-spacing:-.01em;}
+h2{font-size:1.5rem;padding-bottom:.3rem;border-bottom:2px solid var(--accent-soft);}
+h3{font-size:1.2rem;color:var(--accent);}
+h4{font-size:1.03rem;}
+h1+p{color:var(--ink-soft);}
+/* masthead: the strong-led metadata lines right after h1 */
+.masthead{background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--accent);
+  border-radius:8px;padding:1rem 1.25rem;margin:1.2rem 0 2rem;font-size:.92rem;line-height:1.6;}
+.masthead strong{font-family:'Manrope',system-ui,sans-serif;}
+p,li{overflow-wrap:break-word;}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2px;}
+code,kbd,samp{font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.86em;
+  background:var(--code-bg);padding:.1em .35em;border-radius:4px;}
+pre{background:var(--code-bg);border:1px solid var(--rule);border-radius:8px;
+  padding:1rem 1.15rem;overflow:auto;font-size:.84rem;line-height:1.55;}
+pre code{background:none;padding:0;}
+blockquote{margin:1.3rem 0;padding:.85rem 1.2rem;background:var(--callout-bg);
+  border-left:4px solid var(--warn-bar);border-radius:0 8px 8px 0;color:var(--ink-soft);}
+blockquote p{margin:.4rem 0;}
+blockquote strong{color:var(--ink);}
+table{border-collapse:collapse;width:100%;margin:1.4rem 0;font-size:.88rem;
+  font-family:'Manrope',system-ui,sans-serif;}
+th,td{border:1px solid var(--rule);padding:.5rem .7rem;text-align:left;vertical-align:top;}
+th{background:var(--accent);color:#fff;font-weight:600;}
+tr:nth-child(even) td{background:var(--rule-soft);}
+hr{border:none;border-top:1px solid var(--rule);margin:2.4rem 0;}
+.dps-figure{margin:1.8rem 0;text-align:center;}
+.dps-figure img{max-width:100%;height:auto;background:#fff;border:1px solid var(--rule);
+  border-radius:8px;padding:.6rem;}
+.dps-figure figcaption{font-family:'Manrope',system-ui,sans-serif;font-size:.8rem;
+  color:var(--ink-soft);margin-top:.55rem;line-height:1.5;text-align:left;}
+ul,ol{padding-left:1.4rem;}
+li{margin:.3rem 0;}
+.toc{font-family:'Manrope',system-ui,sans-serif;font-size:.82rem;
+  background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:1rem 1.1rem;
+  max-height:calc(100vh - 96px);overflow:auto;margin:0 0 2rem;}
+.toc-title{font-weight:700;color:var(--accent);margin-bottom:.5rem;font-size:.78rem;
+  text-transform:uppercase;letter-spacing:.06em;}
+.toc-summary{cursor:pointer;font-family:'Manrope',system-ui,sans-serif;font-weight:700;
+  color:var(--accent);text-transform:uppercase;letter-spacing:.06em;font-size:.78rem;
+  list-style:none;margin-bottom:.5rem;}
+.toc-summary::-webkit-details-marker{display:none;}
+.toc-summary::marker{content:"";}
+@media(min-width:1180px){.toc-summary{display:none;}}
+.toc ul{list-style:none;margin:0;padding:0;}
+.toc li{margin:.12rem 0;}
+.toc a{color:var(--ink-soft);text-decoration:none;display:block;padding:.12rem .3rem;border-radius:4px;}
+.toc a:hover{background:var(--rule-soft);color:var(--accent);}
+.toc a.active{color:var(--accent);font-weight:700;background:var(--rule-soft);
+  box-shadow:inset 2px 0 0 var(--accent);}
+.toc-l3{padding-left:.9rem;font-size:.95em;}
+.docfoot{font-family:'Manrope',system-ui,sans-serif;font-size:.78rem;color:var(--ink-soft);
+  border-top:1px solid var(--rule);margin-top:3rem;padding-top:1rem;}
+.related{font-family:'Manrope',system-ui,sans-serif;font-size:.9rem;background:var(--callout-bg);
+  border:1px solid var(--rule);border-left:4px solid var(--accent);border-radius:0 8px 8px 0;
+  padding:.8rem 1.1rem;margin:2.2rem 0 .5rem;}
+@media print{
+  .topnav,.toc{display:none!important;}
+  body{background:#fff;font-size:11pt;}
+  .layout{grid-template-columns:1fr;max-width:none;}
+  .wrap{max-width:none;padding:0;}
+  h2{border-color:#999;} th{background:#333;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  .dps-figure img{border-color:#bbb;}
+  a{color:var(--ink);text-decoration:none;}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#top">Skip to main content</a>
+<header class="topnav"><div class="topnav-inner"><a class="brandmark" href="index.html">Decision Provenance Standard<span class="tm">&trade;</span> <span class="ed">v1.0 &middot; Reading Edition (rev.&nbsp;8)</span></a><nav class="docnav" aria-label="DPS launch collateral"><a class="navlink home" href="index.html">← Home</a><a class="navlink home" href="dps-v1.0-rev8-core.html">Standard ↗</a><a class="navlink" href="dps-glossary.html">Glossary</a><a class="navlink" href="dps-onepager.html">One-pager</a><a class="navlink" href="dps-announcement.html">Announcement</a><a class="navlink active" href="dps-comparison-frameworks.html" aria-current="page">Comparison</a><a class="navlink" href="dps-faq.html">FAQ</a></nav></div></header>
+<div class="layout">
+<main class="wrap" id="top">
+<h1 id="the-decision-provenance-standard-and-the-frameworks-it-converses-with">The Decision Provenance Standard and the Frameworks It Converses With</h1>
+<p><em>The Decision Provenance Standard™ · v1.0 · open standard, CC-BY 4.0</em></p>
+<hr />
+<h2 id="read-the-firewall-first">Read the firewall first</h2>
+<p>The Decision Provenance Standard's records are <strong>audit-ready decision provenance</strong>: a structured record of how a decision was made, by whom, against which inputs, with what review, and sealed at what moment. Across every framework below, those records function as an <strong>input substrate</strong> — material that compliance, audit, and governance personnel use when preparing their own work product.</p>
+<blockquote>
+<p><strong>The Standard informs each framework without satisfying it.</strong> A record produced under the Standard may be cited as supporting input; it does <strong>not</strong> satisfy, ensure, certify, or substitute for any control, requirement, or audit obligation under any framework named here. The obligation belongs to the obligated party and is discharged by that party's qualified personnel — counsel, compliance officers, internal auditors, third-party assessors, and certification bodies. The Standard documents process; those personnel make the substantive determinations.</p>
+</blockquote>
+<p>This sheet is grounded strictly in <strong>Companion A — Regulatory Cross-References</strong>. Each row carries that framework's own non-claim. Nothing here is legal advice.</p>
+<hr />
+<h2 id="ai-governance-frameworks">AI-governance frameworks</h2>
+<table>
+<thead>
+<tr>
+<th>Framework</th>
+<th>What it governs</th>
+<th>What the Standard contributes (as input)</th>
+<th>What the Standard does NOT do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EU AI Act — Article 14</strong> (Human Oversight)</td>
+<td>A provider's design-and-development obligation, paired with deployer-side use obligations, so natural persons can exercise effective human oversight of high-risk AI systems.</td>
+<td>Deployer-side: Mode 1 / Mode 2 dispatch structures <em>where</em> oversight is exercised (at authorship vs. at review); the Charter's named accountable owner, escalation rule, and re-decision triggers supply the authority pathway and the monitoring sensitivity oversight presumes.</td>
+<td>Does not satisfy, ensure, or certify any Article 14 or Article 26 obligation; does not opine on whether a system is high-risk, whether a deployer discharged Article 26, or whether oversight personnel have the required competence.</td>
+</tr>
+<tr>
+<td><strong>EU AI Act — Article 17</strong> (Quality Management System)</td>
+<td>A <em>provider's</em> obligation to put a quality management system in place for high-risk AI systems.</td>
+<td>Bounded: the Standard's territory is the <em>deployer</em> side; the Charter's <code>ai_system_identity</code> field points at the AI system the deployer uses.</td>
+<td>Does not constitute, replace, or contribute structurally to Article 17 QMS documentation; a deployer that is also a provider discharges Article 17 through its own provider-side QMS.</td>
+</tr>
+<tr>
+<td><strong>EU AI Act — Article 50</strong> (Transparency)</td>
+<td>Disclosure obligations when an AI system's output reaches a natural person.</td>
+<td>Mode 2 dispatch is the trigger; the five-field disclosure-metadata schema (declaring authority, AI system identity, jurisdiction, content type, timestamp) <em>structures the inputs</em> a named human uses to disclose.</td>
+<td>Does not discharge the disclosure obligation; does not generate, approve, or substitute for the disclosure text, and does not opine on whether a given artifact is within Article 50's substantive scope.</td>
+</tr>
+<tr>
+<td><strong>EU GDPR — Article 17</strong> (Right to Erasure)</td>
+<td>A data subject's right to obtain erasure of personal data, subject to the Article 17(3) exceptions.</td>
+<td>The redaction-event record pattern documents the lawful basis for archival retention; the seal makes the retained record tamper-evident, which is what makes archival retention defensible.</td>
+<td>Does not opine on whether any erasure request applies, whether an Article 17(3) exception holds, or whether a deletion method is adequate under a given jurisdiction's interpretation.</td>
+</tr>
+<tr>
+<td><strong>EU GDPR — Article 22</strong> (Automated individual decision-making)</td>
+<td>Constraints on decisions based solely on automated processing producing legal or similarly significant effects.</td>
+<td>The Standard's records inform the controller's Article 22 work. Where the decision is an <em>employment</em> decision, the stricter HR-side firewall below applies.</td>
+<td>Does not satisfy GDPR; the Article 22 obligations belong to the controller.</td>
+</tr>
+<tr>
+<td><strong>NIST AI RMF — Manage 4.1</strong> (post-deployment monitoring)</td>
+<td>A <em>voluntary</em> U.S. framework; Manage 4.1 addresses continuous documentation of how AI risks are managed post-deployment.</td>
+<td>The Charter's schedule of records is a continuous-documentation commitment (every decision in the class becomes a record); re-decision triggers are the structural shape of "significant performance change" sensitivity.</td>
+<td>Does not satisfy or certify any AI RMF outcome (the framework is voluntary and imposes no obligation); does not opine on the broader program's Govern/Map/Measure/Manage maturity.</td>
+</tr>
+<tr>
+<td><strong>ISO/IEC 42001:2023</strong> (AI Management Systems)</td>
+<td>A <em>certifiable</em> international management-system standard; an accredited body audits the AI management system as a whole.</td>
+<td>The Charter is one process artifact within an AIMS scope; the schedule of records is documented information per Annex SL clause 7.5 where the deployer chooses to integrate it.</td>
+<td>Does not produce an AIMS or an AIMS conformance assessment; the Standard's conformance levels are <strong>not</strong> ISO/IEC 42001 maturity levels and there is no defined cross-walk. The accredited certification body issues the certificate.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="internal-control-and-oversight-backbone">Internal-control and oversight backbone</h2>
+<table>
+<thead>
+<tr>
+<th>Framework</th>
+<th>What it governs</th>
+<th>What the Standard contributes (as input)</th>
+<th>What the Standard does NOT do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Caremark / Marchand v. Barnhill</strong> (Delaware)</td>
+<td>The subject domain of board-of-directors oversight duties under Delaware corporate law.</td>
+<td>For board-reserved decision classes, the Charter and the sealed affirmation lifecycle produce a structured record of who held authority, on what cadence, with what triggers — material a board, its committees, and its counsel may use as input.</td>
+<td>Does not constitute Caremark/Marchand compliance, does not satisfy a board's oversight duties, and does not characterize what the cases hold; legal sufficiency is a substantive determination by counsel admitted in Delaware.</td>
+</tr>
+<tr>
+<td><strong>COSO 2013</strong> (Internal Control – Integrated Framework)</td>
+<td>The design, implementation, and assessment of internal control across five components and seventeen principles.</td>
+<td>Maps at the component level: the Charter (Control Environment), re-decision triggers (Risk Assessment), the Mode dispatch state (Control Activities), the schedule of records (Information and Communication), and the continuous-by-design schedule plus conformance grading (Monitoring Activities, most distinctively Principles 16–17).</td>
+<td>Is not, individually or in combination, an internal control system; the design and operating effectiveness of the reader's control system is a determination by qualified personnel.</td>
+</tr>
+<tr>
+<td><strong>SOX § 404</strong> (Management Assessment of ICFR)</td>
+<td>Management's assessment of internal control over financial reporting at in-scope issuers, plus the external-auditor attestation.</td>
+<td>Where § 404 applicability is independently established, the Charter, schedule of records, and sealed affirmation events are structured inputs to the management assessment and the auditor's audit-trail testing.</td>
+<td>Does not constitute § 404 compliance, does not produce a management assessment or auditor attestation, and does not establish applicability; many adopters are not issuers and are outside § 404's direct scope.</td>
+</tr>
+<tr>
+<td><strong>SOC 2 Type II</strong> (AICPA Trust Services Criteria)</td>
+<td>An independent CPA's report on the design and operating effectiveness of a service organization's controls over a period (Security, Availability, Processing Integrity, Confidentiality, Privacy).</td>
+<td>Maps at the criterion-category level; the continuous-by-design schedule of records aligns structurally with the operating-effectiveness-over-period evaluation a Type II engagement performs.</td>
+<td>Is not a control set and does not produce a SOC 2 Type II report; the opinion is the service auditor's, reached under the Trust Services Criteria and AICPA standards.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="hr-side-regimes-stricter-firewall">HR-side regimes (stricter firewall)</h2>
+<p>The HR-side regulatory regimes have <strong>direct private-right-of-action exposure</strong> that most AI-governance regimes do not yet carry, so the "informs without satisfying" firewall is <strong>stricter</strong> here because the litigation pathway is shorter. The Standard does <strong>not</strong> authorize, validate, certify, or recommend any deployer's use of its records as input to employment decisions under any of these regimes.</p>
+<table>
+<thead>
+<tr>
+<th>Framework</th>
+<th>What it governs</th>
+<th>What the Standard contributes (as input)</th>
+<th>What the Standard does NOT do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>NYC Local Law 144</strong> (Automated Employment Decision Tools)</td>
+<td>Bias-audit, public-summary, and candidate-notice obligations on AEDTs used in NYC hiring, promotion, retention, or termination.</td>
+<td>The Standard's records inform the deployer's AEDT bias-audit work.</td>
+<td>Does not satisfy NYC LL 144; the AEDT obligations belong to the deployer as AEDT operator.</td>
+</tr>
+<tr>
+<td><strong>State employment-AI regimes</strong> (Colorado SB 24-205, Illinois HB 3773, California ADMT proposed regs)</td>
+<td>Risk-assessment, anti-discrimination, and notice-and-explanation obligations on consequential employment decisions substantially assisted by automated systems.</td>
+<td>The Standard's records inform the deployer's risk-assessment and notice work.</td>
+<td>Does not satisfy any state-level regime.</td>
+</tr>
+<tr>
+<td><strong>EU AI Act — Annex III</strong> (employment-side high-risk)</td>
+<td>Classifies recruitment, performance-evaluation, work-allocation, and monitoring AI systems as high-risk under Articles 8–17.</td>
+<td>The Standard's records inform the deployer's Annex III conformity-assessment work.</td>
+<td>Does not satisfy the EU AI Act high-risk obligations.</td>
+</tr>
+<tr>
+<td><strong>EU Platform Work Directive / UK ICO Monitoring Guidance / Israel PPL 5741-1981</strong></td>
+<td>Algorithmic-management transparency, workplace-monitoring proportionality, and employment-data consent/purpose-limitation obligations.</td>
+<td>The Standard's records inform the deployer's work under each regime.</td>
+<td>Does not satisfy any of these regimes; the obligations belong to the deployer, controller, or employer of record.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Across every row above: the Standard does <strong>not</strong> authorize, validate, certify, or recommend any deployer's use of its records as input to an employment decision under any of these regimes.</p>
+</blockquote>
+<hr />
+<h2 id="the-discipline-behind-every-row">The discipline behind every row</h2>
+<p>The mapping is <strong>structural, not substantive</strong>. In each case the Standard's primitives are an input substrate; the conversion from a structured record into legal evidence, an audit attestation, a regulatory filing, or a board-oversight finding is performed by qualified personnel under their own professional standards. Decision provenance is <em>upstream</em> of those determinations — it is not the determinations themselves.</p>
+<p><em>Jurisdiction assumed: U.S. federal and Delaware (primary); United Kingdom, the European Union, and Israel (named secondaries). The traditional frameworks above are predominantly U.S. in origin; for non-U.S. jurisdictions, the cross-reference to local analogues is performed by counsel admitted in that jurisdiction. Not legal advice.</em></p><div class="related"><strong>Related:</strong> <a href="firewall.html">The Firewall — what the Standard is not</a> · <a href="dps-v1.0-rev8-companion-A.html">Regulatory Cross-References</a></div>
+<div class="docfoot">Decision Provenance Standard&trade; v1.0 &mdash; Reading Edition (rev.&nbsp;8). Open standard under CC-BY&nbsp;4.0. Not a certified product. Not legal advice. Not a regulatory substitute. Founding Steward: Yohay Etsion; institutional Steward: Etsion Brands Ltd.</div>
+</main>
+<details class="toc" open aria-label="Table of contents"><summary class="toc-summary">Contents</summary><div class="toc-body"><ul><li class="toc-l2"><a href="#read-the-firewall-first">Read the firewall first</a></li><li class="toc-l2"><a href="#ai-governance-frameworks">AI-governance frameworks</a></li><li class="toc-l2"><a href="#internal-control-and-oversight-backbone">Internal-control and oversight backbone</a></li><li class="toc-l2"><a href="#hr-side-regimes-stricter-firewall">HR-side regimes (stricter firewall)</a></li><li class="toc-l2"><a href="#the-discipline-behind-every-row">The discipline behind every row</a></li></ul></div></details>
+</div>
+<script>
+/* TOC scroll-spy: highlight the section currently in view and keep it visible in the rail. */
+(function(){
+  var links={};
+  document.querySelectorAll('.toc a').forEach(function(a){
+    links[a.getAttribute('href').slice(1)]=a;
+  });
+  var heads=[].slice.call(document.querySelectorAll('main h2[id], main h3[id]'))
+    .filter(function(h){return links[h.id];});
+  if(!heads.length) return;
+  var cur=null;
+  function setActive(id){
+    if(cur===id) return;
+    if(cur&&links[cur]) links[cur].classList.remove('active');
+    cur=id;
+    var a=links[id]; if(!a) return;
+    a.classList.add('active');
+    var toc=a.closest('.toc');
+    if(toc){var ar=a.getBoundingClientRect(),tr=toc.getBoundingClientRect();
+      if(ar.top<tr.top||ar.bottom>tr.bottom) a.scrollIntoView({block:'nearest'});}
+  }
+  var ticking=false;
+  function onScroll(){
+    if(ticking) return; ticking=true;
+    requestAnimationFrame(function(){
+      var top=heads[0], y=110;
+      for(var i=0;i<heads.length;i++){
+        if(heads[i].getBoundingClientRect().top<=y) top=heads[i]; else break;
+      }
+      setActive(top.id); ticking=false;
+    });
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll,{passive:true});
+  onScroll();
+})();
+/* Mobile Contents drawer: open on desktop, collapsed on phones; sync on resize. */
+(function(){
+  function syncTOC(){var d=document.querySelector('details.toc');if(d)d.open=window.innerWidth>=1180;}
+  syncTOC();
+  window.addEventListener('resize',syncTOC);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+Decision Provenance Standard v1.0 (Reading Edition, rev. 8) - Release Bundle Manifest
+Bundle: decision-provenance-standard-v1.0-rev8-bundle.zip
+
+Contents (arcname -> role):
+  md/decision-provenance-standard-v1.0-rev8-core.md    CORE (normative) (Markdown source)
+  docx/1-Decision-Provenance-Standard-v1.0-Reading-Edition-rev8-CORE.docx    CORE (normative) (Word)
+  pdf/1-Decision-Provenance-Standard-v1.0-Reading-Edition-rev8-CORE.pdf    CORE (normative) (PDF)
+  md/decision-provenance-standard-v1.0-companion-A-regulatory-cross-reference.md    Companion A - Regulatory Cross-References (Markdown source)
+  docx/2-Companion-A-Regulatory-Cross-References.docx    Companion A - Regulatory Cross-References (Word)
+  pdf/2-Companion-A-Regulatory-Cross-References.pdf    Companion A - Regulatory Cross-References (PDF)
+  md/decision-provenance-standard-v1.0-companion-B-worked-charter-library.md    Companion B - Worked Charter Library (Markdown source)
+  docx/3-Companion-B-Worked-Charter-Library.docx    Companion B - Worked Charter Library (Word)
+  pdf/3-Companion-B-Worked-Charter-Library.pdf    Companion B - Worked Charter Library (PDF)
+  md/decision-provenance-standard-v1.0-companion-C-implementation-guidance.md    Companion C - Implementation Guidance (Markdown source)
+  docx/4-Companion-C-Implementation-Guidance.docx    Companion C - Implementation Guidance (Word)
+  pdf/4-Companion-C-Implementation-Guidance.pdf    Companion C - Implementation Guidance (PDF)
+  md/decision-provenance-standard-v1.0-companion-D-diagrams.md    Companion D - Diagrams (Markdown source)
+  docx/5-Companion-D-Diagrams.docx    Companion D - Diagrams (Word)
+  pdf/5-Companion-D-Diagrams.pdf    Companion D - Diagrams (PDF)
+  md/decision-provenance-standard-v1.0-appendix-G-governance-and-references.md    Appendix G - Governance and References (Markdown source)
+  docx/6-Appendix-G-Governance-and-References.docx    Appendix G - Governance and References (Word)
+  pdf/6-Appendix-G-Governance-and-References.pdf    Appendix G - Governance and References (PDF)
+
+Note: JSON schemas are deferred to post-substrate-publication (Phase 4).
+The schemas live in the not-yet-de-V2V'd substrate and are intentionally not included here.

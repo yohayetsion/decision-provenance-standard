@@ -1,0 +1,36 @@
+# Decision Provenance Standard — robots.txt
+# A standard wins by being read and cited, by humans and by AI assistants.
+# All crawlers, including AI/LLM crawlers, are explicitly permitted.
+
+User-agent: *
+Allow: /
+
+# AI / LLM crawlers (explicitly welcomed — citation is the goal)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://decisionprovenancestandard.org/sitemap.xml
