@@ -1,0 +1,7 @@
+# Normalize text to LF so checksum files verify with `sha256sum -c` on all platforms.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.zip binary
+*.docx binary
+*.pdf binary
